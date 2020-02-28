@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=Web
+GenericName=Web Browser
+GenericName[de]=Webbrowser
+Comment=Browse the Web
+Comment[de]=Im Internet surfen
+
+Icon=/usr/share/Web/web.png
+
+Type=Application
+Categories=Qt;Network;WebBrowser;
+
+Exec=python3 /usr/share/Web/browser.pyw
+StartupNotify=false
+Terminal=false
+
