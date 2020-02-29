@@ -31,8 +31,7 @@ class AdBlocker(QtWebEngineCore.QWebEngineUrlRequestInterceptor):
         # Add "Do Not Track"-Header
         info.setHttpHeader(b'DNT', b'1')
         # If adblocking is active, block requests
-        if self.active: 
+        if self.active:
             if info.requestUrl().host() in authority_blacklist:
                 info.block(True)
                 print("Blocked ad from: " + info.requestUrl().host())
-            
