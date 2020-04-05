@@ -1,2 +1,3 @@
 #!/bin/bash
-python3 /media/jonas/Data/Bilder/JaguOS/Apps/Web/browser.pyw
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+python ${DIR}/browser.pyw
