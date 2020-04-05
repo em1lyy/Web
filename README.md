@@ -14,3 +14,5 @@ Features:
 * Fast, but battery-saving  
 * Downloads (finally)  
 * Private mode  
+* State-of-the-art HTML5 support, just look at this screenshot:  
+![Screenshot](./screenshot_html5coverage.jpg)
