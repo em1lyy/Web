@@ -41,6 +41,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
     fullscreen = False
     file_seperator = "/"
+    previously_maximized = False
 
     def __init__(self, *args, **kwargs):
 
@@ -257,9 +258,13 @@ class MainWindow(QtWidgets.QMainWindow):
     def on_fullscreen_request(self, request):
         request.accept()
         if (not self.fullscreen):
+            self.previously_maximized = self.isMaximized()
             self.showFullScreen()
         else:
-            self.showNormal()
+            if self.previously_maximized:
+                self.showFullScreen()
+            else:
+                self.showNormal()
         self.fullscreen = not self.fullscreen
 
     # Download stuff
